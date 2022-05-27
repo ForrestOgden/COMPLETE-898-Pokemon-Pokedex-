@@ -1,6 +1,6 @@
 # COMPLETE-898-Pokemon-Pokedex-
 
-This is the complete (898 Pokémon) Pokédex built using PokéAPI. 
+This is the complete (898 Pokémon) Pokédex built using PokéAPI - HTML, CSS, and vanilla JS. 
 
 I built this entire Pokédex myself, through destructuring data from PokéAPI and using lots of loops to produce 898 unique entries.
 
