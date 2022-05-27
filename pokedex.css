@@ -111,11 +111,6 @@ body::-webkit-scrollbar-track {
   transition: transform 3s;
   flex-grow: 1;
 }
-
-.icon:hover {
-  transform: rotate(360deg);
-}
-
 /*  nav-item2 form text input */
 
 .nav-item2 {
