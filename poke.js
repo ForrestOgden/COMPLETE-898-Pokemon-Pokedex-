@@ -549,9 +549,3 @@ setTimeout(function () {
   const introMsg = document.querySelector(".intro");
   introMsg.remove();
 }, 4500);
-
-//
-
-// bugs needing worked out:
-
-// when showing stats, reset btn and filters can still mess up
