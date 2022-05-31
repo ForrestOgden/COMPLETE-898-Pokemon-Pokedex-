@@ -240,7 +240,7 @@ const flavorText = [];
 
   console.log(flavorText);
 
-  for (let i = 0; i < flavorText.length; i++) {
+  for (let i = 0; i < 898; i++) {
     let div = document.querySelector(`.flex-item${i + 1}`);
 
     let description = flavorText[i];
