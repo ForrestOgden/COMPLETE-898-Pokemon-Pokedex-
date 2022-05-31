@@ -240,7 +240,7 @@ setTimeout(function () {
   }
 
   console.log(flavorText);
-}, 4000);
+}, 2500);
 
 setTimeout(function () {
   for (let i = 0; i < flavorText.length; i++) {
@@ -252,7 +252,7 @@ setTimeout(function () {
 
     div.insertAdjacentHTML("beforeend", html);
   }
-}, 10000);
+}, 4200);
 
 // function for showing stats and description on click:---------------------------
 
