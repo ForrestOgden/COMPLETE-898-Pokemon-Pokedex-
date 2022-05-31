@@ -240,7 +240,6 @@ const flavorText = [];
 
   console.log(flavorText);
 
-setTimeout(function () {
   for (let i = 0; i < flavorText.length; i++) {
     let div = document.querySelector(`.flex-item${i + 1}`);
 
@@ -250,7 +249,6 @@ setTimeout(function () {
 
     div.insertAdjacentHTML("beforeend", html);
   }
-}, 2000);
 
 // function for showing stats and description on click:---------------------------
 
