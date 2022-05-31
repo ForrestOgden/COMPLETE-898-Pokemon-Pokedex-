@@ -216,7 +216,6 @@ resetBtn.addEventListener("click", removeFilters);
 
 const flavorText = [];
 
-setTimeout(function () {
   for (let i = 1; i < 899; i++) {
     let url = `https://pokeapi.co/api/v2/pokemon-species/${i}`;
 
@@ -240,7 +239,6 @@ setTimeout(function () {
   }
 
   console.log(flavorText);
-}, 2000);
 
 setTimeout(function () {
   for (let i = 0; i < flavorText.length; i++) {
@@ -252,11 +250,11 @@ setTimeout(function () {
 
     div.insertAdjacentHTML("beforeend", html);
   }
-}, 4000);
+}, 2000);
 
 // function for showing stats and description on click:---------------------------
 
-const showStats = function (el) {
+const showStats = setTimeout(function (el) {
   const info = el.target.getAttribute("id");
   const element = document.querySelector(`.flex-item${info}`);
 
@@ -316,7 +314,7 @@ const showStats = function (el) {
   };
 
   closeBtn.addEventListener("click", clear);
-};
+}, 4500);
 
 const divs = document.querySelectorAll(".flex-item");
 
