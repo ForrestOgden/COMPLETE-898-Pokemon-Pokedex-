@@ -239,7 +239,7 @@ const flavorText = [];
   }
 
 
-  console.log(flavorText);
+
 
 setTimeout(function () {
   for (let i = 0; i < flavorText.length; i++) {
@@ -251,6 +251,8 @@ setTimeout(function () {
 
     div.insertAdjacentHTML("beforeend", html);
   }
+  
+    console.log(flavorText);
 }, 4000);
 
 // function for showing stats and description on click:---------------------------
