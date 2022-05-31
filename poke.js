@@ -252,7 +252,7 @@ setTimeout(function () {
 
     div.insertAdjacentHTML("beforeend", html);
   }
-}, 5100);
+}, 3800);
 
 // function for showing stats and description on click:---------------------------
 
