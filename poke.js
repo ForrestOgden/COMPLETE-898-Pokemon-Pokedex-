@@ -239,6 +239,7 @@ const flavGetter = function () {
     };
       console.log(flavorText);
   }
+};
 
 
 
