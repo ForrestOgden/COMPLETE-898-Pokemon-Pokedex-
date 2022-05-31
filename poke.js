@@ -216,7 +216,6 @@ resetBtn.addEventListener("click", removeFilters);
 
 const flavorText = [];
 
- setTimeout(function () {
   for (let i = 1; i < 899; i++) {
     let url = `https://pokeapi.co/api/v2/pokemon-species/${i}`;
 
@@ -237,10 +236,9 @@ const flavorText = [];
 
       flavorText.push(arr2);
     };
-  }
+
 
   console.log(flavorText);
-}, 2500);
 
 setTimeout(function () {
   for (let i = 0; i < flavorText.length; i++) {
