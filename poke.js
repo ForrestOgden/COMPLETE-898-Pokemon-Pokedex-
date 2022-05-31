@@ -1,58 +1,58 @@
 "use strict";
 // Getting data from the API
 
-for (let i = 1; i < 899; i++) {
-  let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+// for (let i = 1; i < 899; i++) {
+//   let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
 
-  fetch(url)
-    .then((data) => data.json())
-    .then((poke2) => multiply(poke2));
+//   fetch(url)
+//     .then((data) => data.json())
+//     .then((poke2) => multiply(poke2));
 
-  const multiply = function (poke2) {
-    const firstLetter2 = poke2.name.slice(0, 1).toUpperCase();
-    const restName2 = poke2.name.slice(1, poke2.name.length);
-    const nameFixed2 = firstLetter2.concat(restName2);
-    const firstLetterType2 = poke2.types[0].type.name.slice(0, 1).toUpperCase();
-    const restType2 = poke2.types[0].type.name.slice(
-      1,
-      poke2.types[0].type.name.length
-    );
-    const typeFixed2 = firstLetterType2.concat(restType2);
+//   const multiply = function (poke2) {
+//     const firstLetter2 = poke2.name.slice(0, 1).toUpperCase();
+//     const restName2 = poke2.name.slice(1, poke2.name.length);
+//     const nameFixed2 = firstLetter2.concat(restName2);
+//     const firstLetterType2 = poke2.types[0].type.name.slice(0, 1).toUpperCase();
+//     const restType2 = poke2.types[0].type.name.slice(
+//       1,
+//       poke2.types[0].type.name.length
+//     );
+//     const typeFixed2 = firstLetterType2.concat(restType2);
 
-    const html =
-      poke2.types.length > 1
-        ? `
-      <div id=${poke2.id} class='flex-item flex-item${poke2.id} ${poke2.types[0].type.name} ${poke2.name} ${poke2.name[0]}'>
-        <p class='num-name'>#${i} ${nameFixed2}</p>
-        <img class='sprite' src='${poke2.sprites.front_default}'  loading='lazy'>
-        <p class='description'> ${typeFixed2} / ${poke2.types[1].type.name} </p>
-      <div class='stats hidden'>
-      <div class='hp'>HP: ${poke2.stats[0].base_stat}</div>
-      <div class='attack'>Attack: ${poke2.stats[1].base_stat}</div>
-      <div class='defense'>Defense: ${poke2.stats[2].base_stat}</div>
-      <div class='special-attack'>Special-attack: ${poke2.stats[3].base_stat}</div>
-      <div class='special-defense'>Special-defense: ${poke2.stats[4].base_stat}</div>
-      <div class='speed'>Speed: ${poke2.stats[5].base_stat}</div>
-      </div>
-      </div>`
-        : `
-      <div id=${poke2.id} class='flex-item flex-item${poke2.id} ${poke2.types[0].type.name} ${poke2.name} ${poke2.name[0]}'>
-        <p class='num-name'>#${i} ${nameFixed2}</p>
-        <img class='sprite' src='${poke2.sprites.front_default}'  loading='lazy'>
-        <p class='description'> ${typeFixed2} </p>
-      <div class='stats hidden'>
-      <div class='hp'>HP: ${poke2.stats[0].base_stat}</div>
-      <div class='attack'>Attack: ${poke2.stats[1].base_stat}</div>
-      <div class='defense'>Defense: ${poke2.stats[2].base_stat}</div>
-      <div class='special-attack'>Special-attack: ${poke2.stats[3].base_stat}</div>
-      <div class='special-defense'>Special-Defense: ${poke2.stats[4].base_stat}</div>
-      <div class='speed'>Speed: ${poke2.stats[5].base_stat}</div>
-      </div>
-      </div>`;
+//     const html =
+//       poke2.types.length > 1
+//         ? `
+//       <div id=${poke2.id} class='flex-item flex-item${poke2.id} ${poke2.types[0].type.name} ${poke2.name} ${poke2.name[0]}'>
+//         <p class='num-name'>#${i} ${nameFixed2}</p>
+//         <img class='sprite' src='${poke2.sprites.front_default}'  loading='lazy'>
+//         <p class='description'> ${typeFixed2} / ${poke2.types[1].type.name} </p>
+//       <div class='stats hidden'>
+//       <div class='hp'>HP: ${poke2.stats[0].base_stat}</div>
+//       <div class='attack'>Attack: ${poke2.stats[1].base_stat}</div>
+//       <div class='defense'>Defense: ${poke2.stats[2].base_stat}</div>
+//       <div class='special-attack'>Special-attack: ${poke2.stats[3].base_stat}</div>
+//       <div class='special-defense'>Special-defense: ${poke2.stats[4].base_stat}</div>
+//       <div class='speed'>Speed: ${poke2.stats[5].base_stat}</div>
+//       </div>
+//       </div>`
+//         : `
+//       <div id=${poke2.id} class='flex-item flex-item${poke2.id} ${poke2.types[0].type.name} ${poke2.name} ${poke2.name[0]}'>
+//         <p class='num-name'>#${i} ${nameFixed2}</p>
+//         <img class='sprite' src='${poke2.sprites.front_default}'  loading='lazy'>
+//         <p class='description'> ${typeFixed2} </p>
+//       <div class='stats hidden'>
+//       <div class='hp'>HP: ${poke2.stats[0].base_stat}</div>
+//       <div class='attack'>Attack: ${poke2.stats[1].base_stat}</div>
+//       <div class='defense'>Defense: ${poke2.stats[2].base_stat}</div>
+//       <div class='special-attack'>Special-attack: ${poke2.stats[3].base_stat}</div>
+//       <div class='special-defense'>Special-Defense: ${poke2.stats[4].base_stat}</div>
+//       <div class='speed'>Speed: ${poke2.stats[5].base_stat}</div>
+//       </div>
+//       </div>`;
 
-    const container = document.querySelector(".flex-container");
-  };
-}
+//     const container = document.querySelector(".flex-container");
+//   };
+// }
 
 /// function completed
 
