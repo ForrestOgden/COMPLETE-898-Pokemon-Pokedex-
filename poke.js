@@ -236,6 +236,7 @@ const flavorText = [];
 
       flavorText.push(arr2);
     };
+  }
 
 
   console.log(flavorText);
