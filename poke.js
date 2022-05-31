@@ -318,9 +318,7 @@ const showStats = function (el) {
 
 const divs = document.querySelectorAll(".flex-item");
 
-divs.forEach((el) => el.addEventListener("click", function(){
-  setTimeout(showStats, 4500)
-}));
+divs.forEach((el) => el.addEventListener("click", showStats));
 
 //
 //
