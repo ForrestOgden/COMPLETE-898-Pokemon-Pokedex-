@@ -254,7 +254,7 @@ setTimeout(function () {
 
 // function for showing stats and description on click:---------------------------
 
-const showStats = setTimeout(function (el) {
+const showStats = function (el) {
   const info = el.target.getAttribute("id");
   const element = document.querySelector(`.flex-item${info}`);
 
@@ -314,11 +314,13 @@ const showStats = setTimeout(function (el) {
   };
 
   closeBtn.addEventListener("click", clear);
-}, 4500);
+}
 
 const divs = document.querySelectorAll(".flex-item");
 
-divs.forEach((el) => el.addEventListener("click", showStats));
+divs.forEach((el) => el.addEventListener("click", function(){
+  setTimeout(showStats, 4500)
+}));
 
 //
 //
