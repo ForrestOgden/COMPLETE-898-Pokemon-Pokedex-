@@ -212,50 +212,53 @@ resetBtn.addEventListener("click", removeFilters);
 //
 //
 
-// a function to add a paragraph containing a description---------------------------
+// a function to add a paragraph containing a description--------------------------------------------------------
 
-const flavorText = [];
+// const flavorText = [];
 
-  for (let i = 1; i < 899; i++) {
-    let url = `https://pokeapi.co/api/v2/pokemon-species/${i}`;
+//   for (let i = 1; i < 899; i++) {
+//     let url = `https://pokeapi.co/api/v2/pokemon-species/${i}`;
 
-    fetch(url)
-      .then((data) => data.json())
-      .then((poke3) => addDescription(poke3));
+//     fetch(url)
+//       .then((data) => data.json())
+//       .then((poke3) => addDescription(poke3));
 
-    const addDescription = function (poke3) {
-      const [...values] = poke3.flavor_text_entries.values();
-      const eng = values.find((obj) => obj.language.name === "en");
+//     const addDescription = function (poke3) {
+//       const [...values] = poke3.flavor_text_entries.values();
+//       const eng = values.find((obj) => obj.language.name === "en");
 
-      const flav = eng.flavor_text;
+//       const flav = eng.flavor_text;
 
-      let arr = flav.split("\f");
-      arr.join();
+//       let arr = flav.split("\f");
+//       arr.join();
 
-      let arr2 = arr.reduce((acc, el) => acc + " " + el);
+//       let arr2 = arr.reduce((acc, el) => acc + " " + el);
 
-      flavorText.push(arr2);
-    };
-  }
-
-
+//       flavorText.push(arr2);
+//     };
+//   }
 
 
-setTimeout(function () {
-  for (let i = 0; i < flavorText.length; i++) {
-    let div = document.querySelector(`.flex-item${i + 1}`);
+// setTimeout(function () {
+//   for (let i = 0; i < flavorText.length; i++) {
+//     let div = document.querySelector(`.flex-item${i + 1}`);
 
-    let description = flavorText[i];
+//     let description = flavorText[i];
 
-    let html = `<p class='flav-text hidden'>${description}</p>`;
+//     let html = `<p class='flav-text hidden'>${description}</p>`;
 
-    div.insertAdjacentHTML("beforeend", html);
-  }
+//     div.insertAdjacentHTML("beforeend", html);
+//   }
   
-    console.log(flavorText);
-}, 4000);
+//     console.log(flavorText);
+// }, 4000);
 
-// function for showing stats and description on click:---------------------------
+
+// I have commented out the flav-text getting and applying functions (that had timers) since each pokemon now has a manually copied and pasted flav-text paragraph
+// that will work with the showStats function below
+
+
+// function for showing stats and description on click:--------------------------------------------------
 
 const showStats = function (el) {
   const info = el.target.getAttribute("id");
